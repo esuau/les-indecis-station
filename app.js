@@ -19,7 +19,11 @@ app.get('/',(request,response) => {
 
 app.get('/list',(request,response) => {
 	response.send(msg);
-})
+}
+
+app.get('/check',(request,response) => {
+	response.send('connected_to_csc_access_point');
+}
 
 app.listen(port, (err) => {
 	if(err) {
