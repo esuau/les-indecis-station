@@ -15,15 +15,18 @@ const requestHandler = (request,response) => {
 
 app.get('/',(request,response) => {
 	response.send('You are connected on CSC AP');
-})
+	console.log("connected client query on /")
+});
 
 app.get('/list',(request,response) => {
 	response.send(msg);
-}
+	console.log("connected client query on /list")
+});
 
 app.get('/check',(request,response) => {
 	response.send('connected_to_csc_access_point');
-}
+	console.log("connected client query on /check")
+});
 
 app.listen(port, (err) => {
 	if(err) {
