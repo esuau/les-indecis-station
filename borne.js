@@ -18,7 +18,7 @@ app.get('/',(request,response) => {
 	console.log("connected client query on /")
 });
 
-app.get('/list',(request,response) => {
+app.get('/list',(req,response) => {
 	request('http://backend.undefined.inside.esiag.info/get_vehicles', {json:false}, (err, res, body) => {
 		if(err) { return console.log(err);}
 		msg = body ;
