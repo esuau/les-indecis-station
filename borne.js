@@ -34,3 +34,5 @@ app.listen(port, (err) => {
 	}
 	console.log('server is listeing on port 8080');
 });
+
+module.exports = app
