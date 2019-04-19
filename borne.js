@@ -36,7 +36,7 @@ app.listen(port, (err) => {
 	if(err) {
 		return console.log('Unexpected error');
 	}
-	console.log('server is listeing on port 8080');
+	console.log('server is listening on port 8080');
 });
 
 module.exports = app
