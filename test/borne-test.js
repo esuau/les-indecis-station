@@ -10,7 +10,7 @@ let should = chai.should();
 describe('Testing les-indecis-borne', function() {
 	describe('loading express', function () {
 		var app;
-		beforeEach(function () {
+		before(function () {
 			app = require('../borne.js');
 		});
 		after(function (){
