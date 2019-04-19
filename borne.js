@@ -19,8 +19,12 @@ app.get('/',(request,response) => {
 });
 
 app.get('/list',(request,response) => {
-	response.send(msg);
-	console.log("connected client query on /list")
+	request('http://backend.undefined.inside.esiag.info/get_vehicles', {json:false}, (err, res, body) => {
+		if(err) { return console.log(err);}
+		msg = body ;
+		response.send(msg);
+		console.log("connected client query on /list")
+	});
 });
 
 app.get('/check',(request,response) => {
